@@ -1,0 +1,36 @@
+h1{
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+}
+
+table{
+  margin: auto;
+}
+
+h2{
+  border: 3px solid white;
+  width: 125px;
+  height: 250px;
+  margin: auto;
+  padding: 10px;
+}
+
+#squareone{
+  background-color: #246EB9;
+}
+
+#squaretwo{
+  background-color: #4CB944;
+}
+
+#squarethree{
+  background-color: #F4F2D7;
+}
+
+#squarefour{
+  background-color: #F5EE9E;
+}
+
+#squarefive{
+  background-color: #F06543;
+}
