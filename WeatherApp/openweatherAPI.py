@@ -6,7 +6,7 @@
 import requests, json, sys, os
 
 # Enter your API key here
-api_key = "mykey"
+api_key = "apikey"
 
 def get_weather(api_key, location):
     url = "https://api.openweathermap.org/data/2.5/weather?q={}&units=metric&appid={}".format(location, api_key)
@@ -15,12 +15,13 @@ def get_weather(api_key, location):
 
 def printWeather():
     weather = get_weather(api_key, 'New York')
-    condition = weather['main']
-    print(condition)
-    #description = weather['description']
-    print(weather)
-    celc_to_fah = ( condition['temp']* (9/5))+32
-    print(celc_to_fah)
+    forcasts = weather['weather']
+    temp = weather['main']
+    #cond = forcasts[0]['main']
+    desc = forcasts[0]['description']
+    celc_to_fah = ( temp['temp']* (9/5))+32
+    the_weather = "Todays forecast is predicted to be {} at a temperature of {}ºF".format(desc, celc_to_fah)
+    return the_weather
 
 
-printWeather()
+print(printWeather())
